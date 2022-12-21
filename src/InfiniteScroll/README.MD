@@ -20,7 +20,7 @@ setItemLists([...itemLists, ...res.data]);
 ```
 
 > 그 이유는, useEffect에 의해 재정의된 상황은 `target`의 값이 바뀐 상황이므로
-> 무한스크롤이 동작하면서는 useEffect 내부 코드가 다시 실행될 이유가 없다.
+> 무한스크롤이 동작하면서는 useEffect 내부 코드가 다시 새롭게 정의되어 다시 실행될 이유가 없다.
 > 즉, 그 시기에 기억하고 있는 itemLists는 `setItemLists([...itemLists, ...res.data]);`로 할 경우
 > `itemLists`는 무한스크롤로 늘려가도 해당 코드에서는 비어있는 빈배열 상태로 인식할 것이다.
 
