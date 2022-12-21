@@ -21,6 +21,14 @@ const App = () => {
     return () => observer && observer.disconnect();
   }, [target]);
 
+  const onIntersect = async ([entry], observer) => {
+    if (entry.isIntersecting && !isLoaded) {
+      observer.unobserve(entry.target);
+      await getMoreItem();
+      observer.observe(entry.target);
+    }
+  };
+
   const getMoreItem = async () => {
     setIsLoaded(true);
     const res = await axios.get(
