@@ -1,5 +1,6 @@
 import Counter from "./Counter/Counter";
 import { useState, useEffect, useCallback } from "react";
+import { Container, Title } from "../../../pages/BtnCountPage";
 
 function App() {
   const [totalCount, setTotalCount] = useState(0);
@@ -7,8 +8,8 @@ function App() {
     console.log(totalCount);
   }, []);
   return (
-    <div>
-      TotalCount : {totalCount}
+    <Container>
+      <Title>React - TotalCount : {totalCount}</Title>
       <Counter
         onIncrease={() => {
           setTotalCount(totalCount + 1);
@@ -39,7 +40,7 @@ function App() {
           func();
         }}
       ></Counter>
-    </div>
+    </Container>
   );
 }
 
