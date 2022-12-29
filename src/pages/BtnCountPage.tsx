@@ -1,5 +1,6 @@
 import ReactCounter from "../components/BtnCount/React";
 import ReduxCounter from "../components/BtnCount/Redux";
+import ContextAPICounter from "../components/BtnCount/ContextAPI";
 import styled from "styled-components";
 
 export default function BtnCountPage() {
@@ -7,6 +8,7 @@ export default function BtnCountPage() {
     <BtnCountPageContainer>
       <ReactCounter />
       <ReduxCounter />
+      <ContextAPICounter />
     </BtnCountPageContainer>
   );
 }
