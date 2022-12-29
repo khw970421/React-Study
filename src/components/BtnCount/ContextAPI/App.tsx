@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext } from "react";
 import {
   CountContext,
   CountDispatchContext,
@@ -13,8 +13,6 @@ const App = () => {
   const totalCount = useContext(TotalCountContext);
   const countDispatch = useContext(CountDispatchContext);
   const totalCountDispatch = useContext(TotalCountDispatchContext);
-
-  useEffect(() => {}, []);
 
   const handleIncrease = (val, key) => {
     countDispatch({ type: "ADD", val, key });
